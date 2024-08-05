@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Adder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #467571;
+        }
+        h1 {
+            color: #f2ebeb;
+        }
+        .form-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #467571;
+        }
+        .form-container input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #d1d1d1;
+            width: 100%;
+            background-color: antiquewhite;
+        }
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .button-container a button {
+            background-color: #34495e;
+            color: #ecf0f1;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button-container a button:hover {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Data Adder</h1>
+    <div class="form-container">
+        <form action="{{ url_for('add_attendance') }}" method="post">
+            <input type="number" name="S_No" placeholder="Enter Serial Number" required>
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="text" name="locality" placeholder="Enter Locality" required>
+            <input type="number" name="phone_no" placeholder="Enter Phone Number" required>
+            <input type="text" name="item" placeholder="Enter Item" required>
+            <input type="number" name="price" placeholder="Enter Price" required>
+            <input type="number" name="pending" placeholder="Enter Pending" required>
+            <button type="submit" style="border-radius: 5px; padding: 20px;font-size: 16px;
+            margin: 10px 0;color: #f8f7f8;background-color: #2c3e50;">Add Product</button>
+        </form>
+    </div>
+
+    <div class="button-container">
+        <a href="{{ url_for('home') }}">
+            <button type="button">Back to Home</button>
+        </a>
+    </div>
+</body>
+</html>
