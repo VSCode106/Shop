@@ -11,11 +11,11 @@ def get_csv_file_path():
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/take_attendance')
 def take_attendance():
-    return render_template('index.html')
+    return render_template('product.html')
 
 @app.route('/view_attendance')
 def view_attendance():
